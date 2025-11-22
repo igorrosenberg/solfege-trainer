@@ -1,0 +1,46 @@
+Tell me about the LICENSE: CC0 License
+
+help me I want to auto-complete file names in the claud line UI
+
+Please us the @treble-clef-svgrepo-com.svg as the favicon
+
+Please create a README. State the the favicon is taken from https://www.svgrepo.com/svg/98269/treble-clef
+
+my browser won't reload the favicon. How to force it ?
+
+None of these worked
+
+Help me understand the data flow. How does the app know the possile packs to play ?
+
+[Request interrupted by user for tool use]Help me understand the data flow. How does the app know the possile clefs to play ? I think there's some setSelectedClef
+
+Could you refactor both clefs into an array ?
+
+I wnt to localize the App. It seems things are written in English. Can you spot all these ?
+
+yes
+
+The image names have a convention. tell me which
+
+Using convention "{clef} {note} {number}.jpg", modify the answer-area. I want to display
+span{note} span(number)
+give classes to these spans.
+
+Use CSS as you suggest. Don't forget to add some padding
+
+Can I export this onto a simple http server ?
+
+Oh no. The dist folder contains root links, for example /assets/index-5xIn8wVk.js
+make these relative please !
+
+Oh no, the json files also have incorrect paths
+
+what is the build command to produce a dist fodler ?
+
+oh no, loading the json has the same problem !
+
+http://igor.rosenberg.free.fr/la-images.json
+
+Listen : the code to load the json uses a fetch. It should use a relative path too
+
+save all my input to the conversation in @instructions.2.txt

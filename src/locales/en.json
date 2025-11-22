@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "Solfège Trainer",
+    "chooseClef": "Choose a clef to begin:",
+    "loading": "Loading...",
+    "home": "Home"
+  },
+  "clefs": {
+    "la": "Alto Clef (La)",
+    "sol": "Treble Clef (Sol)"
+  },
+  "instructions": {
+    "showAnswer": "Click on the image to see the answer",
+    "continue": "Click to continue to the next question",
+    "finish": "Click to finish and return to clef selection"
+  },
+  "alt": {
+    "solfegeQuestion": "Solfège question"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "Entraîneur de Solfège",
+    "chooseClef": "Choisissez une clé pour commencer :",
+    "loading": "Chargement...",
+    "home": "Accueil"
+  },
+  "clefs": {
+    "la": "Clef Fa",
+    "sol": "Clef Sol"
+  },
+  "instructions": {
+    "showAnswer": "Cliquez sur l'image pour voir la réponse",
+    "continue": "Cliquez pour passer à la question suivante",
+    "finish": "Cliquez pour terminer et revenir à la sélection de clé"
+  },
+  "alt": {
+    "solfegeQuestion": "Question de solfège"
+  }
+}

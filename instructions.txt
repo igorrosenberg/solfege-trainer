@@ -1,0 +1,40 @@
+User Input from Conversation:
+
+1. check the files in current folder
+
+2. yes
+
+3. each image is a clef (la or sol) followed by a note, with the numbered octave
+
+4. Create an React application.
+   choose one clef
+   present in random order all the pictures (as a question), one at a time.
+   upon clicking on a picture, the solution is shown: the name of the file
+   upon clicking on the text shown, the next picture comes up
+   Add breadcrumbs, counter
+
+5. For some reason, when I clic on the image, the next image is not loading
+
+6. The images seem very big. What is your recommendation to make the app cleaner. I'm on desktop, how would the correct height to apply be calculted
+
+7. [Question responses]
+   - Sizing method: Hybrid approach
+   - Screen space: Compact (40-50%)
+
+8. Can you save all my input of this conversation in a file, call it instructions.txt
+
+9. UI change. Please present the question and answer in fixed areas of the screen. That way, there is no flicker when clicking
+
+10. the .answer-area changes height, depending on whether it has an answer or not. Fix that
+
+11. The images do not all have the same size. Please list these differnt sizes
+
+12. fixed height for the question area. Please.
+
+13. Any way to mae the "npm run dev" take changes into account and auto-reload
+
+14. Please tell me where the click events are detected ?
+
+15. I want the click on question and answer be the same event. Both go forward. Is there a higher block that could be used to receive the onClick ?
+
+16. Can you save all my input of this conversation in a file, call it instructions.txt

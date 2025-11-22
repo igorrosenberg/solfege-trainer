@@ -1,0 +1,22 @@
+{
+  "name": "solfege-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-images": "node scripts/generate-image-list.cjs",
+    "dev": "npm run generate-images && vite",
+    "build": "npm run generate-images && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "i18next": "^25.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^16.3.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}
