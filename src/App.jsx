@@ -178,11 +178,13 @@ function App() {
         </div>
 
         <div className="answer-area">
-          {showSolution && (
+          {showSolution ? (
             <p className="solution">
               <span className="note">{note}</span>
               <span className="number">({number})</span>
             </p>
+          ) : (
+            <p className="question-mark">?</p>
           )}
         </div>
       </div>
