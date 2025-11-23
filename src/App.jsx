@@ -17,7 +17,7 @@ function shuffleArray(array) {
 }
 
 function App() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [selectedClef, setSelectedClef] = useState(null)
   const [images, setImages] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -77,6 +77,21 @@ function App() {
               {t(`clefs.${clef.id}`)}
             </button>
           ))}
+        </div>
+        <div className="language-footer">
+          <button
+            onClick={() => i18n.changeLanguage('en')}
+            className={i18n.language === 'en' ? 'active' : ''}
+          >
+            EN
+          </button>
+          <span className="language-separator">/</span>
+          <button
+            onClick={() => i18n.changeLanguage('fr')}
+            className={i18n.language === 'fr' ? 'active' : ''}
+          >
+            FR
+          </button>
         </div>
       </div>
     )
