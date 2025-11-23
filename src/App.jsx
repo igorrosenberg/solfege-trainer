@@ -74,12 +74,18 @@ function App() {
         setImages([])
         setCurrentIndex(0)
         setShowSolution(false)
+      } else if (e.key === 'Backspace') {
+        e.preventDefault()
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1)
+          setShowSolution(false)
+        }
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedClef, handleClick])
+  }, [selectedClef, handleClick, currentIndex])
 
   if (!selectedClef) {
     return (
