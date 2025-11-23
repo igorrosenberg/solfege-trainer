@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import './App.css'
 
@@ -46,6 +46,22 @@ function App() {
     }
   }, [selectedClef])
 
+  const handleClick = useCallback(() => {
+    if (!showSolution) {
+      setShowSolution(true)
+    } else {
+      if (currentIndex < images.length - 1) {
+        setCurrentIndex(currentIndex + 1)
+        setShowSolution(false)
+      } else {
+        setSelectedClef(null)
+        setImages([])
+        setCurrentIndex(0)
+        setShowSolution(false)
+      }
+    }
+  }, [showSolution, currentIndex, images.length])
+
   useEffect(() => {
     if (!selectedClef) return
 
@@ -63,23 +79,7 @@ function App() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedClef, showSolution, currentIndex, images.length])
-
-  const handleClick = () => {
-    if (!showSolution) {
-      setShowSolution(true)
-    } else {
-      if (currentIndex < images.length - 1) {
-        setCurrentIndex(currentIndex + 1)
-        setShowSolution(false)
-      } else {
-        setSelectedClef(null)
-        setImages([])
-        setCurrentIndex(0)
-        setShowSolution(false)
-      }
-    }
-  }
+  }, [selectedClef, handleClick])
 
   if (!selectedClef) {
     return (
