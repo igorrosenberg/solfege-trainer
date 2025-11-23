@@ -111,7 +111,7 @@
 }
 
 .hover-instruction {
-  display: none;    /* I really don't care about instructions */
+  display: none;    /* We really don't want to see instructions */
   position: absolute;
   top: 0;
   left: 0;

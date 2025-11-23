@@ -87,6 +87,16 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [selectedClef, handleClick, currentIndex])
 
+  useEffect(() => {
+    if (!selectedClef || images.length === 0) return
+
+    const nextIndex = currentIndex + 1
+    if (nextIndex < images.length) {
+      const img = new Image()
+      img.src = `./${selectedClef}/${images[nextIndex]}`
+    }
+  }, [currentIndex, images, selectedClef])
+
   if (!selectedClef) {
     return (
       <div className="clef-selection">
