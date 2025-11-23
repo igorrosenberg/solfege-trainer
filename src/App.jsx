@@ -46,6 +46,25 @@ function App() {
     }
   }, [selectedClef])
 
+  useEffect(() => {
+    if (!selectedClef) return
+
+    const handleKeyDown = (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault()
+        handleClick()
+      } else if (e.key === 'Escape') {
+        setSelectedClef(null)
+        setImages([])
+        setCurrentIndex(0)
+        setShowSolution(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedClef, showSolution, currentIndex, images.length])
+
   const handleClick = () => {
     if (!showSolution) {
       setShowSolution(true)
