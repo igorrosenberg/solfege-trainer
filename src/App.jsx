@@ -136,6 +136,14 @@ function App() {
       </div>
 
       <div className="quiz-content" onClick={handleClick} style={{ cursor: 'pointer' }}>
+        <div className="hover-instruction">
+          {showSolution
+            ? (currentIndex < images.length - 1
+                ? t('instructions.continue')
+                : t('instructions.finish'))
+            : t('instructions.showAnswer')}
+        </div>
+
         <div className="question-area">
           <img
             src={imagePath}
@@ -145,20 +153,11 @@ function App() {
         </div>
 
         <div className="answer-area">
-          {showSolution ? (
-            <>
-              <p className="solution">
-                <span className="note">{note}</span>
-                <span className="number">({number})</span>
-              </p>
-              <p className="instruction">
-                {currentIndex < images.length - 1
-                  ? t('instructions.continue')
-                  : t('instructions.finish')}
-              </p>
-            </>
-          ) : (
-            <p className="instruction">{t('instructions.showAnswer')}</p>
+          {showSolution && (
+            <p className="solution">
+              <span className="note">{note}</span>
+              <span className="number">({number})</span>
+            </p>
           )}
         </div>
       </div>

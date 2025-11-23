@@ -107,6 +107,30 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+
+.hover-instruction {
+  display: none;    /* I really don't care about instructions */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(76, 175, 80, 0.95);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 12px 12px 0 0;
+}
+
+.quiz-content:hover .hover-instruction {
+  opacity: 1;
 }
 
 .question-area {
@@ -135,13 +159,6 @@
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.instruction {
-  color: #666;
-  font-size: 0.95rem;
-  margin: 0.5rem 0;
-  font-style: italic;
 }
 
 .solution {
